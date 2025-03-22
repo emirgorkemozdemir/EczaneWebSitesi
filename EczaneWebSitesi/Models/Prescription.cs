@@ -21,5 +21,8 @@ namespace EczaneWebSitesi.Models
         public string DrugsID { get; set; }
     
         public virtual Customer Customer { get; set; }
+
+        // ilaçların adları veritabanından gelmiyor abi, isimleri buna atacağım.
+        public List<string> DrugNames = new List<string>();
     }
 }

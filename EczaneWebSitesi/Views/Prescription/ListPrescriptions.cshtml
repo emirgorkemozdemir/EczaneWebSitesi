@@ -16,7 +16,7 @@
    <table class="table table-bordered">
        <thead>
            <tr>
-               <th>Müşteri ID</th>
+               <th>Müşteri Adı</th>
                <th>Doktor Adı</th>
                <th>Reçete Tarihi</th>
                <th>İlaçların ID</th>
@@ -27,10 +27,16 @@
            @foreach (var recete in Model)
            {
                <tr>
-                   <td>@recete.CustomerID</td>
+                   <td>@recete.Customer.FirstName @recete.Customer.LastName</td>
                    <td>@recete.DoctorName</td>
                    <td>@recete.PrescriptionDate.ToShortDateString()</td>
-                   <td>@recete.DrugsID</td>
+                   <td>
+                       @foreach (var ilac_adları in recete.DrugNames)
+                       {
+                           <span>@ilac_adları , </span>
+                       }
+                   </td>
+                   
                </tr>
            }
        </tbody>

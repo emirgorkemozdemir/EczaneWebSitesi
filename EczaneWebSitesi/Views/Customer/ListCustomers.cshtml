@@ -1,0 +1,24 @@
+﻿@using EczaneWebSitesi.Models
+@model List<Customer>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListCustomers</title>
+</head>
+<body>
+    <div> 
+        @foreach (var item in Model)
+        {
+            @item.FirstName
+            @item.Phone
+            @item.Address
+        }
+    </div>
+</body>
+</html>
