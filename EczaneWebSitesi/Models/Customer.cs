@@ -11,7 +11,8 @@ namespace EczaneWebSitesi.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Customer
     {
         public Customer()
@@ -21,10 +22,18 @@ namespace EczaneWebSitesi.Models
         }
     
         public int CustomerID { get; set; }
+
+        [Required(ErrorMessage ="İsim boş bırakılamaz")]
         public string FirstName { get; set; }
+
+        [Required(ErrorMessage ="Soyisim boş bırakılamaz")]
         public string LastName { get; set; }
         public Nullable<System.DateTime> BirthDate { get; set; }
+
+        [Required(ErrorMessage ="Telefon boş bırakılamaz")]
         public string Phone { get; set; }
+
+        [Required(ErrorMessage ="Adres boş bıraklıamaz")]
         public string Address { get; set; }
     
         public virtual ICollection<Prescription> Prescriptions { get; set; }

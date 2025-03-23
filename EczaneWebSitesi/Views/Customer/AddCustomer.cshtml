@@ -1,0 +1,34 @@
+﻿@model EczaneWebSitesi.Models.Customer
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddCustomer", "Customer", FormMethod.Post))
+{
+    <div>
+        @Html.TextBoxFor(recete => recete.Phone)
+        @Html.ValidationMessageFor(recete => recete.Phone)
+    </div>
+
+
+    <div>
+        @Html.TextBoxFor(recete => recete.Address)
+        @Html.ValidationMessageFor(recete => recete.Address)
+
+    </div>
+
+    <div>
+        @Html.TextBoxFor(recete => recete.FirstName)
+        @Html.ValidationMessageFor(recete => recete.FirstName)
+
+    </div>
+
+    <div>
+        @Html.TextBoxFor(recete => recete.LastName)
+        @Html.ValidationMessageFor(recete => recete.LastName)
+    </div>
+
+
+
+    <input type="submit" value="Kaydet" />
+}

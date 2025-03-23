@@ -17,5 +17,30 @@ namespace EczaneWebSitesi.Controllers
             List<Customer> musteriler = db.Customers.ToList();
             return View(musteriler);
         }
+
+
+
+
+        [HttpGet]
+        public ActionResult AddCustomer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddCustomer(Customer customer)
+        {
+            // eklediğiniz öğenin classına yazdığınız şartları kontrol eder. şartlara uyuyorsa çalışır.
+            if (ModelState.IsValid)
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+          
+        }
     }
 }
