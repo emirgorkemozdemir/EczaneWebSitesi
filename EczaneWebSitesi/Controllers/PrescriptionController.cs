@@ -58,7 +58,7 @@ namespace EczaneWebSitesi.Controllers
         public ActionResult DeletePrescription(int id)
         {
             // id'sine göre secili olan reçeteyi buldum
-            var secili_recete = db.Prescriptions.Find(id);
+            Prescription secili_recete = db.Prescriptions.Find(id);
 
             db.Prescriptions.Remove(secili_recete);
             db.SaveChanges();

@@ -42,5 +42,15 @@ namespace EczaneWebSitesi.Controllers
             }
           
         }
+
+
+        public ActionResult DeleteCustomer(int id)
+        {
+            var secili_recete = db.Customers.Find(id);
+            db.Customers.Remove(secili_recete);
+            db.SaveChanges();
+
+            return RedirectToAction("ListCustomers");
+        }
     }
 }

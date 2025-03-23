@@ -30,6 +30,9 @@
                     <td>@customer.LastName</td>
                     <td>@customer.Phone</td>
                     <td>@customer.Address</td>
+                    <td>
+                        <a href="/Customer/DeleteCustomer?id=@customer.CustomerID" class="btn btn-danger">Sil</a>
+                    </td>
                 </tr>
             }
         </tbody>
