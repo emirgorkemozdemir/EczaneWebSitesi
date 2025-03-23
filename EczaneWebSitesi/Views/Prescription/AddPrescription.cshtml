@@ -4,8 +4,8 @@
     Layout = null;
 }
 
-@using(Html.BeginForm())
- {
+@using(Html.BeginForm("AddPrescription", "Prescription",FormMethod.Post))
+{
     @Html.TextBoxFor(recete=>recete.CustomerID)
     @Html.TextBoxFor(recete=>recete.DoctorName)
     @Html.TextBoxFor(recete=>recete.DrugsID)

@@ -38,8 +38,13 @@ namespace EczaneWebSitesi.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddPrescription()
+        public ActionResult AddPrescription(Prescription recete)
         {
+            recete.PrescriptionDate = DateTime.Now;
+
+            db.Prescriptions.Add(recete);
+            db.SaveChanges();
+
             return View();
         }
     }
