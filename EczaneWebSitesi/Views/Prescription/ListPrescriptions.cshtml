@@ -20,6 +20,7 @@
                <th>Doktor Adı</th>
                <th>Reçete Tarihi</th>
                <th>İlaçların ID</th>
+               <th>Reçeteyi Sil</th>
            </tr>
        </thead>
 
@@ -35,6 +36,10 @@
                        {
                            <span>@ilac_adları , </span>
                        }
+                   </td>
+
+                   <td>
+                       <a href="/Prescription/DeletePrescription?id=@recete.PrescriptionID" class="btn btn-danger">Sil</a>
                    </td>
                    
                </tr>

@@ -11,14 +11,21 @@ namespace EczaneWebSitesi.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Prescription
     {
         public int PrescriptionID { get; set; }
+
+        [Required]
         public int CustomerID { get; set; }
+        [Required]
         public string DoctorName { get; set; }
-        public System.DateTime PrescriptionDate { get; set; }
+        [Required]
+
         public string DrugsID { get; set; }
+        public System.DateTime PrescriptionDate { get; set; }
+       
     
         public virtual Customer Customer { get; set; }
 

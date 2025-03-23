@@ -4,11 +4,21 @@
     Layout = null;
 }
 
-@using(Html.BeginForm("AddPrescription", "Prescription",FormMethod.Post))
+
+@using (Html.BeginForm("AddPrescription", "Prescription", FormMethod.Post))
 {
-    @Html.TextBoxFor(recete=>recete.CustomerID)
-    @Html.TextBoxFor(recete=>recete.DoctorName)
-    @Html.TextBoxFor(recete=>recete.DrugsID)
+    @Html.TextBoxFor(recete => recete.CustomerID)
+    @Html.ValidationMessageFor(recete => recete.CustomerID)
+
+
+
+
+    @Html.TextBoxFor(recete => recete.DoctorName)
+    @Html.ValidationMessageFor(recete => recete.DoctorName)
+
+
+    @Html.TextBoxFor(recete => recete.DrugsID)
+    @Html.ValidationMessageFor(recete => recete.DrugsID)
 
     <input type="submit" value="Kaydet" />
- }
+}

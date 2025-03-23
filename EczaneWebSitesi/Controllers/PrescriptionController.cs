@@ -40,12 +40,30 @@ namespace EczaneWebSitesi.Controllers
         [HttpPost]
         public ActionResult AddPrescription(Prescription recete)
         {
-            recete.PrescriptionDate = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                recete.PrescriptionDate = DateTime.Now;
 
-            db.Prescriptions.Add(recete);
+                db.Prescriptions.Add(recete);
+                db.SaveChanges();
+
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        public ActionResult DeletePrescription(int id)
+        {
+            // id'sine göre secili olan reçeteyi buldum
+            var secili_recete = db.Prescriptions.Find(id);
+
+            db.Prescriptions.Remove(secili_recete);
             db.SaveChanges();
 
-            return View();
+            return RedirectToAction("ListPrescriptions");
         }
     }
 }
