@@ -9,16 +9,30 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>ListCustomers</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <title>Müşteri Listesi</title>
 </head>
 <body>
-    <div> 
-        @foreach (var item in Model)
-        {
-            @item.FirstName
-            @item.Phone
-            @item.Address
-        }
-    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Telefon</th>
+                <th>Adres</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.FirstName</td>
+                    <td>@customer.LastName</td>
+                    <td>@customer.Phone</td>
+                    <td>@customer.Address</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>
