@@ -1,0 +1,14 @@
+﻿@model EczaneWebSitesi.Models.Prescription
+
+@{
+    Layout = null;
+}
+
+@using(Html.BeginForm())
+ {
+    @Html.TextBoxFor(recete=>recete.CustomerID)
+    @Html.TextBoxFor(recete=>recete.DoctorName)
+    @Html.TextBoxFor(recete=>recete.DrugsID)
+
+    <input type="submit" value="Kaydet" />
+ }

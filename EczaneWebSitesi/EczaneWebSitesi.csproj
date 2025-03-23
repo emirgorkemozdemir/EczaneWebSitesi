@@ -249,6 +249,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Prescription\ListPrescriptions.cshtml" />
     <Content Include="Views\Customer\ListCustomers.cshtml" />
+    <Content Include="Views\Prescription\AddPrescription.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

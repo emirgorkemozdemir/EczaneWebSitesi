@@ -30,5 +30,17 @@ namespace EczaneWebSitesi.Controllers
             }
             return View(receteler);
         }
+
+        [HttpGet]
+        public ActionResult AddPrescription()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddPrescription()
+        {
+            return View();
+        }
     }
 }
