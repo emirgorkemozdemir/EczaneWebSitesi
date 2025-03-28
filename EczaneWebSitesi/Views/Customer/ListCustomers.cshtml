@@ -33,9 +33,15 @@
                     <td>
                         <a href="/Customer/DeleteCustomer?id=@customer.CustomerID" class="btn btn-danger">Sil</a>
                     </td>
+                    <td>
+                        <a href="/Customer/UpdateCustomer?id=@customer.CustomerID" class="btn btn-warning">Güncelle</a>
+                    </td>
                 </tr>
             }
+
         </tbody>
     </table>
+
+    <a href="/Customer/AddCustomer" class="btn btn-danger">Ekle</a>
 </body>
 </html>

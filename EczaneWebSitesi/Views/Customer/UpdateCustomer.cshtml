@@ -1,0 +1,40 @@
+﻿@model EczaneWebSitesi.Models.Customer
+
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("UpdateCustomer", "Customer", FormMethod.Post))
+{
+
+    <div>
+        @Html.HiddenFor(musteri => musteri.CustomerID)
+    </div>
+
+    <div>
+        @Html.TextBoxFor(musteri => musteri.Phone)
+        @Html.ValidationMessageFor(musteri => musteri.Phone)
+    </div>
+
+
+    <div>
+        @Html.TextBoxFor(musteri => musteri.Address)
+        @Html.ValidationMessageFor(musteri => musteri.Address)
+
+    </div>
+
+    <div>
+        @Html.TextBoxFor(musteri => musteri.FirstName)
+        @Html.ValidationMessageFor(musteri => musteri.FirstName)
+
+    </div>
+
+    <div>
+        @Html.TextBoxFor(musteri => musteri.LastName)
+        @Html.ValidationMessageFor(musteri => musteri.LastName)
+    </div>
+
+
+
+    <input type="submit" value="Güncelle" />
+}
